@@ -30,7 +30,7 @@ public class TwinStickMovement : MonoBehaviour
     private Vector2 movement;
     private Vector2 aim;
     private Vector3 playerVelocity;
-    
+
     private PlayerControls _playerControls;
     private PlayerInput _playerInput;
     private void Awake()
