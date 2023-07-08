@@ -12,6 +12,10 @@ public class RunawayScript : MonoBehaviour
     
     [SerializeField] private float currDeltaDistance = 15f;
 
+    [SerializeField] private Material human;
+    [SerializeField] private Material zombie;
+
+    [SerializeField] private GameObject characterModel;
     // Possible states: human, zombie
     public string state = "human";
 
@@ -31,9 +35,17 @@ public class RunawayScript : MonoBehaviour
     {
         state = "zombie";
         tag = "grimace";
+        
+        // Get renderer
         UnityEngine.Renderer myRenderer = GetComponent<UnityEngine.Renderer>();
+        
+        // Chaning color
         Color newColor = new Color(1,0,1);
         myRenderer.material.color = newColor;
+        
+        // Change the Matereal of the human
+        myRenderer = characterModel.GetComponent<UnityEngine.Renderer>();
+        myRenderer.material = zombie;
     }
     // Start is called before the first frame update
     void Start()
