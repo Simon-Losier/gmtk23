@@ -18,7 +18,7 @@ public class RunawayScript : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.CompareTag("grimace") || collision.gameObject.CompareTag("Player")) && state.Equals("human"))
+        if ((collision.gameObject.CompareTag("grimace") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("grimaceBall")) && state.Equals("human"))
         {
             Grimace();
         }
