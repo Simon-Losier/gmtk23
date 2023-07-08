@@ -6,6 +6,7 @@ TagManager:
   tags:
   - grimace
   - human
+  - grimaceBall
   layers:
   - Default
   - TransparentFX
