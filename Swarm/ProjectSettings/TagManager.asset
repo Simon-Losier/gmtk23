@@ -7,11 +7,12 @@ TagManager:
   - grimace
   - human
   - grimaceBall
+  - Lead
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tree
   - Water
   - UI
   - 
