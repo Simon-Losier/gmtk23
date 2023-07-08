@@ -46,6 +46,9 @@ public class RunawayScript : MonoBehaviour
         // Change the Matereal of the human
         myRenderer = characterModel.GetComponent<UnityEngine.Renderer>();
         myRenderer.material = zombie;
+        
+        //add a point to the player
+        Points.AddPoints(1);
     }
     // Start is called before the first frame update
     void Start()
