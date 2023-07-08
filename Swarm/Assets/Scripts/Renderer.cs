@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.AI;
 
-public class Renderer : MonoBehaviour {
+
+public class Renderer : MonoBehaviour
+{
+
+    [SerializeField] private NavMeshSurface surface;
+    
     [SerializeField] private int width = 10;
     [SerializeField] private int height = 10;
     private float vertical;
@@ -78,22 +85,36 @@ public class Renderer : MonoBehaviour {
         }    
     }
 
-    private void Start() {
+    public void GenerateLevel()
+    {
+        length = wall.localScale.x + gap;
+            
+        foreach (Transform t in transform) {
+            if (t.name != "Ground") {
+                    
+                Destroy(t.gameObject);
+            }
+        }
+
+        Render(Generator.Generate(width, height));
     }
 
+    private void Start() {
+        
+        GenerateLevel();
+        surface.BuildNavMesh();
+    }
+
+    
+    
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            length = wall.localScale.x + gap;
+        
+        //will need to remove this
+        //if (Input.GetKeyDown(KeyCode.Space)) {
             
-            foreach (Transform t in transform) {
-                if (t.name != "Ground") {
-                    
-                    Destroy(t.gameObject);
-                }
-            }
+        //    GenerateLevel();
+        //    surface.BuildNavMesh();
 
-            Render(Generator.Generate(width, height));
-
-        }
+        //}
     }
 }
