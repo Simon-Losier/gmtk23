@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,25 @@ public class RunawayScript : MonoBehaviour
     [SerializeField] private NavMeshAgent agent = null;
     [SerializeField] private Transform chaser = null;
     [SerializeField] private float displacementDistance = 5f;
-
+    
     [SerializeField] private float currDeltaDistance = 15f;
+
+    public string state = "human";
+    // Possible state: human, zombie
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision");
+        if (collision.gameObject.CompareTag("grimace"))
+        {
+            Debug.Log("Grimace Time");
+            state = "zombie";
+            
+            // Change human to be purple 
+            // Make the human join the swarm
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +41,14 @@ public class RunawayScript : MonoBehaviour
         }
 
     }
-
+    
     private void MoveToPos(Vector3 pos)
     {
         agent.SetDestination(pos);
         agent.isStopped = false;
     }
-
+    
+    
     // Update is called once per frame
     void Update()
     {
@@ -45,7 +64,6 @@ public class RunawayScript : MonoBehaviour
         if (currDeltaDistance > deltaDistance)
         {
             MoveToPos(transform.position - (normalizedDirection * displacementDistance));
-
         }
     }
 }

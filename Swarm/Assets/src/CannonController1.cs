@@ -10,12 +10,7 @@ public class CannonController : MonoBehaviour
     public GameObject Cannonball;
     public Transform ShotPoint;
 
-    public GameObject Explosion;
-    private void Update()
-    {
-
-    }
-
+    //public GameObject Explosion;
     public void Throw()
     {
         float HorizontalRotation = Input.GetAxis("Horizontal");
@@ -25,10 +20,8 @@ public class CannonController : MonoBehaviour
         CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.forward * BlastPower;
         
         // Added explosion for added effect
-        Destroy(Instantiate(Explosion, ShotPoint.position, ShotPoint.rotation), 2);
-
-        // Shake the screen for added effect
-        //Screenshake.ShakeAmount = 5;
+        //Destroy(Instantiate(Explosion, ShotPoint.position, ShotPoint.rotation), 2);
+        
     }
 
 }
