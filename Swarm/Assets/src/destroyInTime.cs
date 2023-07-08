@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Destroy(this.gameObject, time);
+        Destroy(this.gameObject, time);
     }
 
     private void OnCollisionEnter(Collision other)

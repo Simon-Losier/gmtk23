@@ -69,7 +69,7 @@ public class TwinStickMovement : MonoBehaviour
         Vector3 move = new Vector3(movement.x, 0, movement.y);
         _controller.Move(playerSpeed * Time.deltaTime * move);
 
-        //playerVelocity.y += gravityValue * Time.deltaTime;
+        playerVelocity.y -= gravityValue * Time.deltaTime;
         _controller.Move(playerVelocity * Time.deltaTime);
     }
 
