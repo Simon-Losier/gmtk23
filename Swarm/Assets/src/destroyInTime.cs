@@ -17,7 +17,6 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("grimace") || other.gameObject.CompareTag("human"))
         {
-            Debug.Log("Destroying grimace");
             Destroy(gameObject);
         }
     }
