@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7399bbd5-4d51-4fef-9960-3b1aecbab7be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swarm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swarm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SwarmLead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SwarmLead.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Citizen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Citizen.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SwarmMechanic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SwarmMechanic.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/CannonController1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/CannonController1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/src/TwinStickMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/TwinStickMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Swarm/Zombie.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Plugins/EnhancedTouch/Finger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/Samples~/InGameHints/InGameHintsActions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Editor/SettingsDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Editor/UserSetting.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Samples~/PackageWithProjectAndUserSettings/MySettingsManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688753199501</updated>
       <workItem from="1688753200446" duration="10172000" />
-      <workItem from="1688838014031" duration="3385000" />
+      <workItem from="1688838014031" duration="5603000" />
     </task>
     <servers />
   </component>

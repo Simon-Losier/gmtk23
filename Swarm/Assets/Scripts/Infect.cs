@@ -7,14 +7,19 @@ using UnityEngine.AI;
 public class Infect : MonoBehaviour {
     void InfectCitizen() {
         Debug.Log("infecting citizen");
-        Destroy(GetComponent<NavigationScript>());
-        Destroy(GetComponent<RunawayScript>());
-        Destroy(GetComponent<NavMeshAgent>());
-        gameObject.AddComponent<Zombie>();
-        GetComponent<Zombie>().swarmLead = GameObject.FindWithTag("Lead").transform;
-        GetComponent<Zombie>().maxSpeed = 10;
-        GetComponent<Zombie>().speed = 10;
-        GetComponent<Zombie>().stoppingDistance = 2;
+        if (transform.GetComponent<RunawayScript>() != null &&
+            transform.GetComponent<NavMeshAgent>() != null) {
+            Destroy(transform.GetComponent<RunawayScript>());
+            Destroy(transform.GetComponent<NavMeshAgent>());
+        }
+        if (transform.GetComponent<Zombie>() == null) {
+            gameObject.AddComponent<Rigidbody>();    
+            gameObject.AddComponent<Zombie>();
+            transform.GetComponent<Zombie>().swarmLead = GameObject.FindWithTag("Player").transform;
+            transform.GetComponent<Zombie>().maxSpeed = 30;
+            transform.GetComponent<Zombie>().speed = 10;
+            transform.GetComponent<Zombie>().stoppingDistance = .5f;
+        }
     }
 
     private void OnCollisionEnter(Collision collision) {
