@@ -12,22 +12,29 @@ public class RunawayScript : MonoBehaviour
     
     [SerializeField] private float currDeltaDistance = 15f;
 
+    // Possible states: human, zombie
     public string state = "human";
-    // Possible state: human, zombie
 
+    
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision");
-        if (collision.gameObject.CompareTag("grimace"))
+        if ((collision.gameObject.CompareTag("grimace") || collision.gameObject.CompareTag("Player")) && state.Equals("human"))
         {
-            Debug.Log("Grimace Time");
-            state = "zombie";
-            
-            // Change human to be purple 
-            // Make the human join the swarm
+            Grimace();
         }
     }
 
+    /**
+     * Turns the human into grimace
+     */
+    private void Grimace()
+    {
+        state = "zombie";
+        tag = "grimace";
+        UnityEngine.Renderer myRenderer = GetComponent<UnityEngine.Renderer>();
+        Color newColor = new Color(1,0,1);
+        myRenderer.material.color = newColor;
+    }
     // Start is called before the first frame update
     void Start()
     {
