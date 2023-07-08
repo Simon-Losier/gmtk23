@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Zombie : MonoBehaviour {
-    [SerializeField] private Transform swarmLead;
-    [SerializeField] private float speed;
-    [SerializeField] private float maxSpeed;
-    [SerializeField] private float stoppingDistance;
+    [SerializeField] public Transform swarmLead;
+    [SerializeField] public float speed;
+    [SerializeField] public float maxSpeed;
+    [SerializeField] public float stoppingDistance;
     private Rigidbody rb;
 
     private void Start() {

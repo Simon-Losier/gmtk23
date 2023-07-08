@@ -54,8 +54,8 @@ public class TwinStickMovement : MonoBehaviour
     void Update()
     {
         HandleInput();
-        HandleMovement();
         HandleRotation();
+        HandleMovement();
     }
 
     void HandleInput()
@@ -67,7 +67,7 @@ public class TwinStickMovement : MonoBehaviour
     void HandleMovement()
     {
         Vector3 move = new Vector3(movement.x, 0, movement.y);
-        _controller.Move(playerSpeed * Time.deltaTime * move);
+        _controller.Move(playerSpeed * Time.deltaTime * transform.forward);
 
         playerVelocity.y -= gravityValue * Time.deltaTime;
         _controller.Move(playerVelocity * Time.deltaTime);
