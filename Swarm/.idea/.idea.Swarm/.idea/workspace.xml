@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7399bbd5-4d51-4fef-9960-3b1aecbab7be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swarm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swarm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Kenney rigs/Animations/idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Kenney rigs/Animations/idle.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Kenney rigs/Animations/run.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Kenney rigs/Animations/run.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Kenney rigs/Model/characterMedium.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Kenney rigs/Model/characterMedium.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/src/TwinStickMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/src/TwinStickMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Citizen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Citizen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/aiScene/NavMesh-NavMesh Surface 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/aiScene/NavMesh-NavMesh Surface 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/aiScene/NavMesh-NavMesh Surface.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/aiScene/NavMesh-NavMesh Surface.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RunawayScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RunawayScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.polybrush/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +20,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Swarm/Zombie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.1/InputSystem/Plugins/EnhancedTouch/Finger.cs" root0="SKIP_HIGHLIGHTING" />
