@@ -7,12 +7,14 @@ public class Points : MonoBehaviour
 {
 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI goalText;
     public static int points;
-    public int maxScore;
+    public int goal;
     // Start is called before the first frame update
     void Start()
     {
         points = 0;
+        goalText.text = "Goal: " + goal;
     }
 
     public static void AddPoints(int addedPoints)
