@@ -19,6 +19,8 @@ public class RunawayScript : MonoBehaviour
     // Possible states: human, zombie
     public string state = "human";
 
+    private RunAnimation animator;
+
     
     private void OnCollisionEnter(Collision collision)
     {
@@ -40,8 +42,8 @@ public class RunawayScript : MonoBehaviour
         UnityEngine.Renderer myRenderer = GetComponent<UnityEngine.Renderer>();
         
         // Chaning color
-        Color newColor = new Color(1,0,1);
-        myRenderer.material.color = newColor;
+        // Color newColor = new Color(1,0,1);
+        // myRenderer.material.color = newColor;
         
         // Change the Matereal of the human
         myRenderer = characterModel.GetComponent<UnityEngine.Renderer>();
@@ -65,6 +67,9 @@ public class RunawayScript : MonoBehaviour
             }
         }
 
+        characterModel = GetComponentInChildren<SkinnedMeshRenderer>().gameObject;
+        Debug.Log(characterModel);
+        animator = GetComponent<RunAnimation>();
     }
     
     private void MoveToPos(Vector3 pos)
@@ -99,6 +104,12 @@ public class RunawayScript : MonoBehaviour
 
             MoveToPos(chaser.position);
             
+        }
+        if (agent.velocity.magnitude > 0) {
+            animator.Run();
+        }
+        else {
+            animator.Idle();
         }
     }
 }
