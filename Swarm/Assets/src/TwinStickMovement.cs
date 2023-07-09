@@ -32,12 +32,14 @@ public class TwinStickMovement : MonoBehaviour
     private Vector3 playerVelocity;
     
     private PlayerControls _playerControls;
+    private RunAnimation animator;
     private PlayerInput _playerInput;
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
         _playerControls = new PlayerControls();
         _playerInput = GetComponent<PlayerInput>();
+        animator = GetComponent<RunAnimation>();
     }
 
     private void OnEnable()
@@ -67,6 +69,14 @@ public class TwinStickMovement : MonoBehaviour
     void HandleMovement()
     {
         Vector3 move = new Vector3(movement.x, 0, movement.y);
+        if (move.magnitude > 0) {
+            Debug.Log("running");
+            animator.Run();
+        }
+        else {
+            Debug.Log("idling");
+            animator.Idle();
+        }
         _controller.Move(playerSpeed * Time.deltaTime * move);
 
         playerVelocity.y -= gravityValue * Time.deltaTime;
