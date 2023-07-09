@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 /**
  * Input controls.
@@ -120,5 +121,10 @@ public class TwinStickMovement : MonoBehaviour
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme.Equals("Gamepad");
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadSceneAsync("Main Menu");
     }
 }

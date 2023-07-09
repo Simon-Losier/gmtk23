@@ -46,6 +46,12 @@ public class RunawayScript : MonoBehaviour
         // Change the Matereal of the human
         myRenderer = characterModel.GetComponent<UnityEngine.Renderer>();
         myRenderer.material = zombie;
+        
+        //add a point to the player
+        Points.AddPoints(1);
+        
+        //change the speed of the zombie
+        agent.speed = 30;
     }
     // Start is called before the first frame update
     void Start()
@@ -76,13 +82,23 @@ public class RunawayScript : MonoBehaviour
             return;
         }
 
-        float deltaDistance = Vector3.Distance(chaser.position, transform.position);
-        Vector3 normalizedDirection = (chaser.position - transform.position).normalized;
-
-
-        if (currDeltaDistance > deltaDistance)
+        if (state.Equals("human"))
         {
-            MoveToPos(transform.position - (normalizedDirection * displacementDistance));
+            float deltaDistance = Vector3.Distance(chaser.position, transform.position);
+            Vector3 normalizedDirection = (chaser.position - transform.position).normalized;
+
+
+            if (currDeltaDistance > deltaDistance)
+            {
+                MoveToPos(transform.position - (normalizedDirection * displacementDistance));
+            }
+        }
+        else if (state.Equals("zombie"))
+        {
+            //Vector3 normalizedDirection = (chaser.position - transform.position).normalized;
+
+            MoveToPos(chaser.position);
+            
         }
     }
 }
