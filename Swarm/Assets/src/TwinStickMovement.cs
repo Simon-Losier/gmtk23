@@ -71,11 +71,9 @@ public class TwinStickMovement : MonoBehaviour
     {
         Vector3 move = new Vector3(movement.x, 0, movement.y);
         if (move.magnitude > 0) {
-            Debug.Log("running");
             animator.Run();
         }
         else {
-            Debug.Log("idling");
             animator.Idle();
         }
         _controller.Move(playerSpeed * Time.deltaTime * move);

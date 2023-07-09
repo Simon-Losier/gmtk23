@@ -19,6 +19,8 @@ public class RunawayScript : MonoBehaviour
     // Possible states: human, zombie
     public string state = "human";
 
+    private RunAnimation animator;
+
     
     private void OnCollisionEnter(Collision collision)
     {
@@ -65,6 +67,8 @@ public class RunawayScript : MonoBehaviour
             }
         }
 
+        characterModel = GetComponentInChildren<Renderer>().gameObject;
+        animator = GetComponent<RunAnimation>();
     }
     
     private void MoveToPos(Vector3 pos)
@@ -99,6 +103,15 @@ public class RunawayScript : MonoBehaviour
 
             MoveToPos(chaser.position);
             
+        }
+        Debug.Log(agent.velocity);
+        if (agent.velocity.magnitude > 0) {
+            Debug.Log("citizen running");
+            animator.Run();
+        }
+        else {
+            Debug.Log("citizen idling");
+            animator.Idle();
         }
     }
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6615494950662926522}
   - component: {fileID: 7214825353904068284}
   - component: {fileID: 3397588435818336686}
-  - component: {fileID: 9069728175797114611}
   m_Layer: 0
   m_Name: Citizen
   m_TagString: human
@@ -35,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 1940987428856206752}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6689010486388680451
 MeshFilter:
@@ -110,18 +109,6 @@ MonoBehaviour:
   zombie: {fileID: 2100000, guid: 200022a8eb4603e4e9b038a58e258e18, type: 2}
   characterModel: {fileID: 573100765960405346}
   state: human
---- !u!114 &9069728175797114611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8832226747856309420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b16150446f32e44ab8617d308521eca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2118236317061247563
 PrefabInstance:
   m_ObjectHideFlags: 0
