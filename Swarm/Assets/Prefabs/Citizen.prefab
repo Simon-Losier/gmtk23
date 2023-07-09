@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6615494950662926522}
   - component: {fileID: 7214825353904068284}
   - component: {fileID: 3397588435818336686}
+  - component: {fileID: 6385579305159955777}
+  - component: {fileID: 1313518377934294779}
   m_Layer: 0
   m_Name: Citizen
   m_TagString: human
@@ -34,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 1940987428856206752}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6689010486388680451
 MeshFilter:
@@ -80,8 +82,8 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 259.79
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -109,6 +111,40 @@ MonoBehaviour:
   zombie: {fileID: 2100000, guid: 200022a8eb4603e4e9b038a58e258e18, type: 2}
   characterModel: {fileID: 573100765960405346}
   state: human
+--- !u!95 &6385579305159955777
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8832226747856309420}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 37fb9f9a60841d54f86457a4f351039c, type: 3}
+  m_Controller: {fileID: 9100000, guid: a84ed36e38a266844acc1cc572412a4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1313518377934294779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8832226747856309420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139adb83bc1441441b1bdf7ad135b54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 6385579305159955777}
 --- !u!1001 &2118236317061247563
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -42,8 +42,8 @@ public class RunawayScript : MonoBehaviour
         UnityEngine.Renderer myRenderer = GetComponent<UnityEngine.Renderer>();
         
         // Chaning color
-        Color newColor = new Color(1,0,1);
-        myRenderer.material.color = newColor;
+        // Color newColor = new Color(1,0,1);
+        // myRenderer.material.color = newColor;
         
         // Change the Matereal of the human
         myRenderer = characterModel.GetComponent<UnityEngine.Renderer>();
@@ -67,7 +67,8 @@ public class RunawayScript : MonoBehaviour
             }
         }
 
-        characterModel = GetComponentInChildren<Renderer>().gameObject;
+        characterModel = GetComponentInChildren<SkinnedMeshRenderer>().gameObject;
+        Debug.Log(characterModel);
         animator = GetComponent<RunAnimation>();
     }
     
@@ -104,13 +105,10 @@ public class RunawayScript : MonoBehaviour
             MoveToPos(chaser.position);
             
         }
-        Debug.Log(agent.velocity);
         if (agent.velocity.magnitude > 0) {
-            Debug.Log("citizen running");
             animator.Run();
         }
         else {
-            Debug.Log("citizen idling");
             animator.Idle();
         }
     }

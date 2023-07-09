@@ -31,15 +31,15 @@ Transform:
   m_GameObject: {fileID: 323435362717699903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6384164502410601527}
   - {fileID: 7666710786831588231}
   - {fileID: 6957389895800146344}
   - {fileID: 5674503673818967131}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6034038392284889620
 MonoBehaviour:
@@ -120,6 +120,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f4fa90f4-8369-4958-91a2-7f81b52f9e70
     m_ActionName: Controls/Shoot[/Mouse/leftButton,/XInputControllerWindows/rightShoulder,/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 48098ed8-a7f4-467d-8c1b-3a0449f4cd86
+    m_ActionName: Controls/ExitToMenu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controls
