@@ -51,7 +51,7 @@ public class RunawayScript : MonoBehaviour
         Points.AddPoints(1);
         
         //change the speed of the zombie
-        agent.speed = 10;
+        agent.speed = 30;
     }
     // Start is called before the first frame update
     void Start()
@@ -100,6 +100,5 @@ public class RunawayScript : MonoBehaviour
             MoveToPos(chaser.position);
             
         }
-        
     }
 }
